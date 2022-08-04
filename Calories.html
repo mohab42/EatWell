@@ -1,0 +1,115 @@
+<html>
+    <head>
+    <title>My Cals</title>
+
+   <script>
+  function CalsCalculated(numbers){
+      window.msg.innerHTML += numbers + "<br>";
+  }
+  function run(){
+      var num1 = parseInt(window.wgt.value);
+      var num2 = parseInt(window.wk.value);
+      var num3 = parseInt(window.hor.value);
+      CalsCalculated(num1 * num2 * num3 );
+  }
+
+  function calculated(numbers) {
+          window.msg4.innerHTML += numbers + "<br>"; 
+      }
+      function run7() {
+     var n1 = window.br2.value;
+     var r1 = 0.5;
+     calculated(n1 * r1);
+      }
+
+      function calculated2(numbers) {
+          window.msg5.innerHTML += numbers + "<br>"; 
+      }
+
+      function run8() {
+     var n2= window.br3.value;
+     var r2 = 0.7;
+     calculated2(n2 * r2);
+      }
+
+      function calculated3(numbers) {
+          window.msg6.innerHTML += numbers + "<br>"; 
+      }
+      function run9() {
+     var n3 = parseInt(window.br4.value);
+     var n1 = parseInt(window.br2.value);
+     var r1 = 0.5;
+          calculated3(n3 + (n1 * r1));
+      }
+
+    </script>
+      <style>
+          body{
+              background: url(hf.jpg) fixed;
+              font-size: 20px;
+              font-family: cursive;
+              color:brown;
+          }
+          label {
+              margin:50px 50px 50px 50px;
+              background-color:rgb(161, 179, 134);
+              text-align:center;
+              padding:15px;
+          }
+          p {
+           
+              width:12%;
+background:orange;
+padding: 15px;
+margin-left: 25%;
+
+          }
+         input{
+             width:30%;
+             height:30;
+             padding:10px;
+             border :lightgreen solid 2px;
+             border-radius: 25px;
+         }
+         div{
+             margin-left: 25%;
+             padding:12px;
+             text-align: center;
+             width: 10%;
+             background-color: dodgerblue;
+             color:firebrick;
+         }
+         div:hover{
+             background-color: firebrick;
+             color:dodgerblue;
+         }
+     
+    </style>
+    </head>
+    <body>
+   
+    <label>Weight :</label> <input placeholder="Enter Your Weight" id = "wgt"/>
+   <br><br>
+   <label>Weight/kilo :</label> <input  placeholder="Enter Number Of Kilos" id = "wk"/>
+   <br><br>
+   <label>Day hours :</label> <input placeholder="Enter 24" id = "hor"/>
+   <br><br>
+   <div  onclick="window.msg.innerHTML=''; run();">Calculate</div>
+<p id="msg">BMR is = </p>
+
+  <br>
+
+<label>Min Act = </label> <input placeholder="Enter BMR" id="br2"/><br><br>
+ <div onclick=" window.msg4.innerHTML=''; run7();">Calculate</div>
+<p id="msg4">Min Activity = </p>
+<br>
+ <label>Max Act = </label> <input placeholder="Enter BMR" id="br3"/> <br><br>
+ <div onclick=" window.msg5.innerHTML=''; run8();">Calculate</div>
+ <p id="msg5">Max Activity = </p> 
+<br>
+<label>Your Maintain Cals are = </label> <input placeholder="Enter BMR" id="br4"/><br><br>
+ <div onclick="window.msg6.innerHTML=''; run9();">Calculate</div>
+ <p id="msg6">Maintain Cals = </p> 
+
+    </body>
+</html>
